@@ -1,8 +1,9 @@
 Build.PL
+Changes
 lib/Solaris/SysInfo.pm
 lib/Solaris/SysInfo.xs
 lib/Solaris/SysInfo/Constants.pm.PL
 MANIFEST			This list of files
+META.yml
 t/01use.t
 t/02sysinfo.t
-META.yml

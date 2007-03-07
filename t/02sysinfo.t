@@ -2,13 +2,39 @@
 
 use strict;
 
-use Test::More tests => 8;
+use Test::More tests => 18;
 
 use Solaris::SysInfo qw( sysinfo SI_ISALIST );
 
-use POSIX qw( EINVAL );
+use POSIX qw( uname EINVAL );
 
-my $ret = sysinfo( SI_ISALIST );
+my @uname = uname();
+
+my $ret;
+
+# The first 5 sysinfo() entries should match the five results from uname()
+
+$ret = sysinfo( 1 );
+ok( defined $ret, 'defined $ret for 1' );
+is( $ret, $uname[0], 'sysname' );
+
+$ret = sysinfo( 2 );
+ok( defined $ret, 'defined $ret for 2' );
+is( $ret, $uname[1], 'sysname' );
+
+$ret = sysinfo( 3 );
+ok( defined $ret, 'defined $ret for 3' );
+is( $ret, $uname[2], 'sysname' );
+
+$ret = sysinfo( 4 );
+ok( defined $ret, 'defined $ret for 4' );
+is( $ret, $uname[3], 'sysname' );
+
+$ret = sysinfo( 5 );
+ok( defined $ret, 'defined $ret for 5' );
+is( $ret, $uname[4], 'sysname' );
+
+$ret = sysinfo( SI_ISALIST );
 ok( defined $ret, 'defined $ret' );
 
 my @list = split( m/ /, $ret );

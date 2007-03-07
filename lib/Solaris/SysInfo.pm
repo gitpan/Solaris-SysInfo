@@ -14,7 +14,7 @@ our @EXPORT_OK = qw(
    sysinfo
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 bootstrap Solaris::SysInfo $VERSION;
 

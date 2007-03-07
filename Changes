@@ -1,0 +1,12 @@
+Revision history for Solaris-SysInfo
+
+0.02    CHANGES:
+         * t/02sysinfo.t now compares first 5 results against results from
+           POSIX::uname()
+
+        BUGFIXES:
+         * Solaris 8 doesn't like sysinfo( cmd, "", 0 ). Replaced with static
+           buffer that might be big enough already. Retry if not.
+
+0.01    First version, released on an unsuspecting world.
+
