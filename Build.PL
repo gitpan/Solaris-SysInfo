@@ -9,7 +9,11 @@ my $build = Module::Build->new
    PL_files    => {
                      'lib/Solaris/SysInfo/Constants.pm.PL' => 'lib/Solaris/SysInfo/Constants.pm',
                   },
-   license     => 'perl',
+   build_requires => {
+                        'Test::More' => 0,
+                     },
+   license => 'perl',
+   create_makefile_pl => 'traditional',
   );
-
+  
 $build->create_build_script;

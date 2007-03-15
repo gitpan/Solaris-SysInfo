@@ -1,3 +1,9 @@
+/*  You may distribute under the terms of either the GNU General Public License
+ *  or the Artistic License (the same terms as Perl itself)
+ *
+ *  (C) Paul Evans, 2007 -- leonerd@leonerd.org.uk
+ */
+
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
