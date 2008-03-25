@@ -3,6 +3,8 @@ use warnings;
 
 use Module::Build;
 
+die "OS unsupported" unless $^O eq "solaris";
+
 my $build = Module::Build->new
   (
    module_name => 'Solaris::SysInfo',
