@@ -1,5 +1,8 @@
 Revision history for Solaris-SysInfo
 
+0.06    CHANGES:
+         * Various small updates to keep CPANTS happy
+
 0.05    CHANGES:
          * Declare OS unsupported unless building on a Solaris machine
 
